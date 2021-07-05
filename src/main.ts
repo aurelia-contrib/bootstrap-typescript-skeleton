@@ -2,8 +2,6 @@ import {Aurelia} from 'aurelia-framework'
 import * as environment from '../config/environment.json';
 import {PLATFORM} from 'aurelia-pal';
 
-// import jQuery as a global dependency
-import 'jquery';
 
 // import boostrap js as a global dependency
 import 'bootstrap/dist/js/bootstrap.bundle';
@@ -11,7 +9,10 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 // import bootstap css as a global dependency
 import 'bootstrap/dist/css/bootstrap.css';
 
-export function configure(aurelia: Aurelia) {
+// import bootstrap icons as a global dependency
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+export function configure(aurelia: Aurelia): void {
   aurelia.use
     .standardConfiguration()
     .feature(PLATFORM.moduleName('resources/index'));
